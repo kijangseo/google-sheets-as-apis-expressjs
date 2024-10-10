@@ -1,6 +1,6 @@
 backend:
     functions:
-        - entry: app.mjs
+        - entry: backend.mjs
           handler: handler
           name: express
           path: ./
