@@ -13,38 +13,21 @@
 
 </div>
 
-# Express React Getting Started 
+# Exposing Google Sheets as APIs - Express.js implementation
 
-This is a Genezio project template for an Express.js fullstack application. It is a simple Express.js application that is set up to be deployed as a Genezio function.
+In the server/ folder, you'll find the express app that exposes two URL endpoints - one that lists all the sheet names in your spreadsheet, and one that lists the contents of a given sheet.
 
-In the `server/app.mjs` file, you will see a very basic Express.js application that is set up to be deployed as a Genezio function.
-It handles a couple of requests on the following endpoints:
+You can update the backend.msj file to add or modify functions, or create new backend routes.
 
-- `/` -> return a simple "Hello World" message
-- `/hello?name=` -> return the name and the server location
+In the client/ folder, you have a basic React.js app that calls the backend APIs. It lists the sheet names and once one is selected, lists the contents of that spreadsheet.
 
-You can update the Express application in the `client/src/App.tsx` file, you can simply fetch data from the Express web app by sending a request to the function URL.
-
-Note: You can get the Express app's URLs by clicking on `"View your URLs"` button in the code editor in the dashboard or in the `Overview` page.
+Check the src/App.tsx file to see how the backend APIs are called.
 
 # Deploy
-:rocket: You can deploy your own version of the template to Genezio with one click:
+:rocket: You can deploy your own version of this template to Genezio with one click:
 
-[![Deploy to Genezio](https://raw.githubusercontent.com/Genez-io/graphics/main/svg/deploy-button.svg)](https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/express-react-getting-started)
+[![Deploy to Genezio](https://raw.githubusercontent.com/Genez-io/graphics/main/svg/deploy-button.svg)](https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/google-sheets-as-apis-expressjs)
 
-
-## Genezio CLI Commands
-
-Genezio also provides a CLI tool that you can use to deploy your project from your machine.
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install -g genezio`  | Installs genezio globally                        |
-| `genezio login`           | Logs in to genezio                               |
-| `genezio local`           | Starts a local server                            |
-| `genezio deploy`          | Deploys a production project                     |
-| `genezio --help`          | Get help using genezio                           |
 
 ## Learn more
 
@@ -63,11 +46,9 @@ If you need support or you have any questions, please join us in our [Discord ch
 - [Node.JS](https://nodejs.org/en/)
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
-- [Express](https://expressjs.com/)
 
 ***
 
 <div align="center"> <a href="https://genezio.com/">
   <p>Built with Genezio with ❤️ </p>
-  <img alt="genezio logo" src="https://raw.githubusercontent.com/Genez-io/graphics/main/svg/powered_by_genezio.svg" height="40">
 </div>
