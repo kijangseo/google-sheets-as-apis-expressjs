@@ -16,10 +16,6 @@ const sheets = google.sheets({ version: 'v4', auth });
 
 const app = express();
 
-app.get("/", (req, res) => {
-    res.send("Hello World from Express!");
-});
-
 app.get("/sheets", async function (req, res, next) {
     if (!SPREADSHEET_ID) {
         res.status(500).send('SPREADSHEET_ID is not set');
@@ -36,6 +32,19 @@ app.get("/sheets", async function (req, res, next) {
         return res.json(sheetNames);
       }
     } catch (err) {
+        console.error(err);
+        if (err.errors && err.errors[0]?.message) {
+            res.status(500).send(err.errors[0].message);
+            return;
+        }
+        if (err.message) {
+            res.status(500).send(err.message);
+            return;
+        }
+        if (err.code) {
+            res.status(500).send(err.code);
+            return;
+        }
         res.status(500).send(err);
     }
 });

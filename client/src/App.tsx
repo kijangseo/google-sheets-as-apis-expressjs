@@ -21,6 +21,9 @@ export default function App() {
     try {
       const url = import.meta.env.VITE_API_URL;
       const res = await fetch(`${url}/sheets`);
+      if (res.status !== 200) {
+        throw new Error(await res.text());
+      }
       const data = await res.json();
       setSheetNames(data);
       document.getElementById("loadingOption")!.textContent = "Select a sheet";
