@@ -24,7 +24,6 @@ frontend:
         start:
             - npm install --silent
             - npm run dev --silent
-    subdomain: google-sheets-as-apis-expressjs
 name: google-sheets-as-apis-expressjs
 region: us-east-1
 yamlVersion: 2
