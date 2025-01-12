@@ -24,6 +24,7 @@ frontend:
         start:
             - npm install --silent
             - npm run dev --silent
+    subdomain: mediumpurple-little-llama
 name: google-sheets-as-apis-expressjs
 region: us-east-1
 yamlVersion: 2
